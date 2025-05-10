@@ -22,50 +22,55 @@ const builtWith = [
   { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
 ];
 ---
-
 <Layout
-  title='Home'
-  pageTitle='Brutal Theme | Home'
-  description='Brutal is a minimalistic, neobrutalism theme for Astro.'
+  title="Home"
+  pageTitle="My Programming Blog"
+  description="A blog about PHP, Laravel, Linux, HTML, CSS, JavaScript, and web development."
 >
-  <main class='bg-pink p-6'>
+  <main class="bg-pink p-6">
     <MobileSocials />
-    <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
-      <h2 class='hidden'>About Brutal</h2>
-      <div class='col-span-4'>
+    <section id="about" class="grid md:grid-cols-8 gap-8 mt-4">
+      <h2 class="hidden">About the Blog</h2>
+      <div class="col-span-4">
         <Card>
-          <div class='flex flex-col justify-between items-start gap-4'>
-            <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
-              Brutal theme for <a
-                class='text-white'
-                target='_blank'
-                href='https://astro.build/'>Astro</a
-              >
+          <div class="flex flex-col justify-between items-start gap-4">
+            <p class="mt-4 outfit text-2xl md:text-5xl lg:text-7xl">
+              A blog about <span class="text-white">web development</span>
             </p>
-            <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-              A minimalistic, neobrutalism theme for Astro.
+            <p class="mt-2 outfit text-xl md:text-3xl lg:text-5xl">
+              PHP, Laravel, Linux, HTML, CSS, JavaScript and more.
             </p>
-            <Button target={'_self'} href='/blog/'>
-              Check out the blog &rarr;
+            <Button target="_self" href="/blog/">
+              Read articles &rarr;
             </Button>
           </div>
         </Card>
       </div>
-      <div class='col-span-2'>
+      <div class="col-span-2">
         <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
+          <h2 class="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">
+            What's this blog about?
           </h2>
-          <ul class='flex gap-4 flex-wrap'>
+          <p class="poppins">
+            This blog is about programming and web development. I share my experience with PHP, Laravel, Linux, HTML, CSS, JavaScript, and related technologies. Simple and to the point.
+          </p>
+        </Card>
+      </div>
+      <div class="col-span-2">
+        <Card>
+          <h2 class="text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif">
+            Tech Stack
+          </h2>
+          <ul class="flex gap-4 flex-wrap">
             {
               builtWith.map((item) => (
                 <li>
                   <Pill>
                     <a
-                      class='sanchez'
+                      class="sanchez"
                       href={item.url}
-                      target='_blank'
-                      title={`Go to ${item.name}`}
+                      target="_blank"
+                      title={`Visit ${item.name}`}
                     >
                       {item.name}
                     </a>
@@ -74,19 +79,6 @@ const builtWith = [
               ))
             }
           </ul>
-        </Card>
-      </div>
-      <div class='col-span-2'>
-        <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
-          </h2>
-          <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
-          </p>
         </Card>
       </div>
     </section>

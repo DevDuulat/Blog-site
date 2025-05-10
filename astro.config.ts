@@ -4,8 +4,6 @@ import UnoCSS from "unocss/astro";
 
 export default defineConfig({
   // used to generate images
-  output: "static",
-  base: "/Blog-site/",
   site:
     process.env.VERCEL_ENV === "production"
       ? "https://brutal.elian.codes/"
